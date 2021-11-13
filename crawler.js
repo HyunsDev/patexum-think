@@ -39,25 +39,30 @@ const crawlingTwitter = async () => {
         // 미디어 정리
         const mediaList = {}
         for (let i of response.data.includes.media) {
-            let fileExt = i.url.split("?")[0].split('.')[i.url.split("?")[0].split('.').length - 1]
-            let fileName = `${uuidv4()}.${fileExt}`
-            request({
-                method: "GET",
-                uri: i.url,
-                encoding: null
-            }).pipe(fs.createWriteStream(`public/image/twitter/${fileName}`))
-
-            mediaList[i.media_key] = { originUrl: i.url, url: fileName }
+            mediaList[i.media_key] = { originUrl: i.url}
         }
 
         // 데이터 정리
         const newDataLists = []
         const newDatas = responseFiltered.map(e => {
+            const originUrl = mediaList[e.attachments.media_keys[0]].originUrl
+
+            let fileExt = originUrl.split("?")[0].split('.')[originUrl.split("?")[0].split('.').length - 1]
+            let fileName = `${uuidv4()}.${fileExt}`
+            request({
+                method: "GET",
+                uri: originUrl,
+                encoding: null
+            }).pipe(fs.createWriteStream(`public/image/twitter/${fileName}`))
+            
             newDataLists.push(e.id)
             return {
                 id: e.id,
                 url: e.entities.urls[0].url,
-                thumbnail: mediaList[e.attachments.media_keys[0]],
+                thumbnail: {
+                    originUrl: originUrl,
+                    url: fileName
+                },
                 createdAt: e.created_at
             }
         })
