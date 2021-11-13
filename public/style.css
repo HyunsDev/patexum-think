@@ -1,0 +1,295 @@
+.userEL9833256 {
+    position: relative;
+    padding: 20px 0px;
+  }
+
+  .userEL9833256 .row {
+    overflow: hidden;
+    margin: 0 -5px;
+  }
+
+  .userEL9833256 .sns_unit {
+    float: left;
+    width: 16.66%;
+  }
+
+  .userEL9833256 .post {
+    padding: 0 5px;
+  }
+
+  .userEL9833256 .post-wrap {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    margin: 0 auto;
+  }
+
+  .userEL9833256 .post-wrap .bg {
+    width: 100%;
+    opacity: 0;
+  }
+
+  .userEL9833256 .post-wrap .bg img {
+    width: 100%;
+  }
+
+  .userEL9833256 .post-wrap>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: none;
+    max-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .userEL9833256 .post-wrap [data-feed-attachment] {
+    flex-shrink: 0;
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  .userEL9833256 .over-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+  }
+
+  .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+7) {
+    margin-top: 10px;
+  }
+
+  .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+13) {
+    margin-top: 10px;
+  }
+
+  .userEL9833256 .social-feed-container .social-feed-element.show-posts {
+    display: block ! important;
+  }
+
+  .userEL9833256 .post-wrap .post-content,
+  .userEL9833256 .post-wrap .post-content * {
+    opacity: 0;
+    -webkit-transition: ease-in-out .3s;
+    -moz-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
+    transition: ease-in-out .3s;
+  }
+
+  .userEL9833256 .post-wrap:hover .post-content,
+  .userEL9833256 .post-wrap:hover .post-content * {
+    opacity: 1;
+  }
+
+  .userEL9833256 .post-wrap:hover .over-box {
+    opacity: 0.8;
+  }
+
+  .userEL9833256 .post-content .text-box a {
+    color: #fff;
+    display: none;
+  }
+
+  .userEL9833256 .post-wrap .post-content.text-only,
+  .userEL9833256 .post-wrap .post-content.text-only * {
+    opacity: 1;
+  }
+
+  .userEL9833256 .post-content.text-only .text-box p {
+    color: #c6c6c6;
+  }
+
+  .userEL9833256 .post-content.text-only .text-box a {
+    color: #555555;
+    display: none;
+  }
+
+  .userEL9833256 .post-content.text-only .over-box {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .userEL9833256 .post-wrap .read-more {
+    font-family: 'Raleway';
+  }
+
+  .userEL9833256 .post-wrap .read-more>a {
+    color: #3491ef;
+  }
+
+  .userEL9833256 .text-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px 20px;
+    text-align: left;
+  }
+
+  .userEL9833256 .text-box span[data-feed-icon] {
+    margin-right: 5px;
+  }
+
+  .userEL9833256 .text-box span[data-feed-icon],
+  .userEL9833256 .text-box span[data-feed-time-ago] {
+    display: inline-block;
+  }
+
+  .userEL9833256 .text-box p,
+  .userEL9833256 .text-box span {
+    font-family: 'Roboto', 'Nanum Gothic';
+    font-size: 12px;
+    color: #c6c6c6;
+    margin-bottom: 0;
+  }
+
+  .userEL9833256 .text-box p {
+    line-height: 1.6;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+  }
+
+  .userEL9833256 .text-box span a {
+    color: #fff;
+  }
+
+  .userEL9833256 .text-box span {
+    color: #6B6B6B;
+  }
+
+  .userEL9833256 .feed-author-box {
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    text-align: center;
+    color: #333333;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .userEL9833256 .icon-box .fa {
+    vertical-align: text-top;
+  }
+
+  .userEL9833256 .data-feed-load-more {
+    border: none;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #3b3b3b;
+    background-color: #ffffff;
+    font-family: 'Raleway', 'Nanum Gothic';
+    font-size: 11px;
+    margin-top: 15px;
+    padding: 10px 10px;
+    min-width: 110px;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    box-shadow: none;
+    display: inline-block;
+    text-decoration: underline;
+  }
+
+  @media only screen and (max-width:991px) {
+    .userEL9833256 .sns_unit {
+      width: 25%;
+    }
+
+    .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+5) {
+      margin-top: 10px;
+    }
+
+    .dsgn-body.sidebar .userEL9833256 .text-box {
+      padding: 10px 15px;
+    }
+
+    .userEL9833256 .text-box {
+      padding: 20px 25px;
+    }
+
+    .userEL9833256 .post:nth-child(odd) .post-wrap {
+      margin: 0 0 0 auto;
+    }
+
+    .userEL9833256 .post:nth-child(even) .post-wrap {
+      margin: 0 auto 0 0;
+    }
+  }
+
+  @media only screen and (max-width:767px) {
+    .userEL9833256 .container {
+      width: auto !important;
+    }
+
+    .userEL9833256 h6 {
+      margin: 0 -10px 15px -10px;
+    }
+
+    .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+4) {
+      margin-top: 10px;
+    }
+
+    .userEL9833256 .sns_unit {
+      width: 33.33%;
+    }
+
+    .userEL9833256 .text-box p {
+      -webkit-line-clamp: 4;
+    }
+  }
+
+  @media only screen and (max-width:480px) {
+    .userEL9833256 .sns_unit {
+      width: 50%;
+    }
+
+    .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+3) {
+      margin-top: 10px;
+    }
+
+    .userEL9833256 .text-box {
+      padding: 10px 15px;
+    }
+
+    .userEL9833256 .text-box p {
+      -webkit-line-clamp: 3;
+    }
+  }
+
+.post:hover {
+    transition: 200ms;
+    transform: scale(1.05);
+}
+
+.btn {
+    margin: 0 auto;
+    width: auto;
+    padding: 8px 16px;
+    background-color: #05051e;
+    color: #f5ebe1;
+    transition: 200ms;
+}
+
+.btn:hover {
+    background-color: #38383d;
+    color: #f5ebe1;
+}
+
+body {
+    background-color: #f5ebe1;
+}

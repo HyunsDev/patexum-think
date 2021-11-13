@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>혀느현스가 제작함</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
+  <div class="userEL9833256" data-feed-post-length="50" data-feed-limit-twitter="18" data-feed-limit-instagram="18">
+    <div class="container">
+      <div class="row text-center social-feed-container" data-loop="true">
+
+        <% for (let i of instagram) { %>
+          <div class="sns_unit post social-feed-element active">
+            <div class="post-wrap">
+              <a href="https://www.instagram.com/p/<%= i.shortcode %>/" target="_blank">
+                <img src="/image/instagram/<%= i.img %>" data-feed-attachment="">
+                <div class="post-content">
+                </div>
+              </a>
+            </div>
+          </div>
+        <% } %>
+
+        <% for (let i of twitter) { %>
+          <div class="sns_unit post social-feed-element active">
+            <div class="post-wrap">
+              <a href="<%= i.url %>" target="_blank">
+                <img src="/image/twitter/<%= i.thumbnail.url %>" data-feed-attachment="">
+                <div class="post-content">
+                </div>
+              </a>
+            </div>
+          </div>
+        <% } %>
+
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

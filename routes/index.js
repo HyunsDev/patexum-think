@@ -4,12 +4,15 @@ const fs = require('fs')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.json({
-    code: 200,
-    developer: {
-      name: "hyuns",
-      website: "https://hyuns.dev"
-    }
+  const instagramBuffer = fs.readFileSync('./data/instagram.json')
+  const instagramJson = JSON.parse(instagramBuffer.toString())
+
+  const twitterBuffer = fs.readFileSync('./data/twitter.json')
+  const twitterJson = JSON.parse(twitterBuffer.toString())
+
+  res.render('index', {
+    instagram: instagramJson.data,
+    twitter: twitterJson.data
   })
 });
 

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>.userEL9833256 { position: relative; padding: 20px 0px; }
+        .userEL9833256 .row { overflow: hidden; margin: 0 -5px; }
+        .userEL9833256 .sns_unit { float: left; width: 16.66%; }
+        .userEL9833256 .post { padding: 0 5px; }
+        .userEL9833256 .post-wrap { position: relative; display: flex; overflow: hidden; justify-content: center; align-items: center; background: none; margin: 0 auto; }
+        .userEL9833256 .post-wrap .bg { width: 100%; opacity: 0; }
+        .userEL9833256 .post-wrap .bg img {
+         width: 100%;
+        }
+        .userEL9833256 .post-wrap > img {
+         position: absolute;
+         top:50%;
+         left:50%;
+         max-width:none;
+         max-height:100%;
+         -webkit-transform: translate(-50%,-50%);
+         -moz-transform: translate(-50%,-50%);
+         -ms-transform: translate(-50%,-50%);
+         -o-transform: translate(-50%,-50%);
+         transform: translate(-50%,-50%);
+        }
+        .userEL9833256 .post-wrap [data-feed-attachment] {
+         flex-shrink: 0;
+         max-width: 100%;
+         max-height: auto;
+        }
+        .userEL9833256 .over-box {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: #000;
+         opacity: 0;
+        }
+        .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+7) { margin-top:10px; }
+        .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+13) { display:none; }
+        .userEL9833256 .social-feed-container .social-feed-element.show-posts {
+         display: block! important;
+        }
+        .userEL9833256 .post-wrap .post-content,
+        .userEL9833256 .post-wrap .post-content * {
+         opacity: 0;
+         -webkit-transition: ease-in-out .3s;
+         -moz-transition: ease-in-out .3s;
+         -o-transition: ease-in-out .3s;
+         transition: ease-in-out .3s;
+        }
+        .userEL9833256 .post-wrap:hover .post-content, 
+        .userEL9833256 .post-wrap:hover .post-content * {
+         opacity: 1;
+        }
+        .userEL9833256 .post-wrap:hover .over-box {
+         opacity: 0.8;
+        }
+        .userEL9833256 .post-content .text-box a {
+         color: #fff;
+         display:none;
+        }
+        .userEL9833256 .post-wrap .post-content.text-only,
+        .userEL9833256 .post-wrap .post-content.text-only * {
+         opacity: 1;
+        }
+        .userEL9833256 .post-content.text-only .text-box p {
+         color: #c6c6c6;
+        }
+        .userEL9833256 .post-content.text-only .text-box a {
+         color: #555555;
+         display:none;
+        }
+        .userEL9833256 .post-content.text-only .over-box {
+         background-color: rgba(0, 0, 0, 0.8);
+        }
+        .userEL9833256 .post-wrap .read-more {
+         font-family: 'Raleway';
+        }
+        .userEL9833256 .post-wrap .read-more > a {
+         color: #3491ef;
+        }
+        .userEL9833256 .text-box {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         padding: 15px 20px;
+         text-align: left;
+        }
+        .userEL9833256 .text-box span[data-feed-icon] {
+         margin-right: 5px;
+        }
+        .userEL9833256 .text-box span[data-feed-icon], 
+        .userEL9833256 .text-box span[data-feed-time-ago] {
+         display: inline-block;
+        }
+        .userEL9833256 .text-box p,
+        .userEL9833256 .text-box span {
+         font-family: 'Roboto', 'Nanum Gothic';
+         font-size: 12px;
+         color: #c6c6c6;
+         margin-bottom: 0;
+        }
+        .userEL9833256 .text-box p {
+         line-height: 1.6;
+         text-overflow: ellipsis;
+         overflow: hidden;
+         -webkit-line-clamp: 4;
+         -webkit-box-orient: vertical;
+         display: -webkit-box;
+        }
+        .userEL9833256 .text-box span a {
+         color: #fff;
+        }
+        .userEL9833256 .text-box span {
+         color: #6B6B6B;
+        }
+        .userEL9833256 .feed-author-box {
+         position: absolute;
+         bottom: 7px;
+         right: 7px;
+         width: 30px;
+         height: 30px;
+         background-color: transparent;
+         text-align: center;
+         color: #333333;
+         border-radius: 15px;
+         overflow: hidden;
+        }
+        .userEL9833256 .icon-box .fa {
+         vertical-align: text-top;
+        }
+        .userEL9833256 .data-feed-load-more{
+         border: none;
+         -moz-border-radius: 0;
+         border-radius: 0;
+         color: #3b3b3b;
+         background-color: #ffffff;
+         font-family: 'Raleway', 'Nanum Gothic';
+         font-size: 11px;
+         margin-top: 15px;
+         padding: 10px 10px;
+         min-width: 110px;
+         line-height: 1;
+         letter-spacing: 0.2em;
+         box-shadow: none;
+         display: inline-block;
+         text-decoration: underline;
+        }
+        
+        @media only screen and (max-width:991px) {
+         .userEL9833256 .sns_unit { width: 25%; }
+         .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+5) { margin-top:10px; }
+         .dsgn-body.sidebar .userEL9833256 .text-box {  padding: 10px 15px; }
+         .userEL9833256 .text-box {  padding: 20px 25px; }
+         .userEL9833256 .post:nth-child(odd) .post-wrap {  margin: 0 0 0 auto; }
+         .userEL9833256 .post:nth-child(even) .post-wrap {  margin: 0 auto 0 0; }
+        }
+        @media only screen and (max-width:767px) {
+         .userEL9833256 .container { width: auto!important; }   
+         .userEL9833256 h6 { margin: 0 -10px 15px -10px; }
+         .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+4) { margin-top:10px; }
+         .userEL9833256 .sns_unit { width: 33.33%; }
+         .userEL9833256 .text-box p {-webkit-line-clamp: 4;}
+        }
+        @media only screen and (max-width:480px) {
+         .userEL9833256 .sns_unit { width: 50%; }
+         .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+3) { margin-top:10px; }
+         .userEL9833256 .text-box { padding: 10px 15px; }
+         .userEL9833256 .text-box p {-webkit-line-clamp: 3;}
+        }</style>
+</head>
+<body>
+    <div class="userEL9833256" data-feed-post-length="50" data-feed-limit-twitter="18" data-feed-limit-instagram="18">
+        <div class="container">
+            <div class="row text-center social-feed-container" data-loop="true">
+    
+                <div class="sns_unit post social-feed-element active">
+                    <div class="post-wrap">
+                        <div class="bg"><img src="https://storage.googleapis.com/i.addblock.net/sample/sns_cm_1.png"></div>
+                        <img src="https://storage.googleapis.com/i.addblock.net/sample/sns_12_1.jpg" data-feed-attachment="">
+                        <div class="post-content">
+                            <div class="over-box"></div>
+                            <div class="text-box">
+                                <div><span data-feed-icon=""><i class="fa fa-twitter"></i></span> <span data-feed-time-ago="">17 hours ago</span></div>
+                                <p data-feed-text="">Great news!! Creatorlink has been awarded a #Gold trophy in the 2015 Horizon <br><a target="_blank" href="http://t.co/dfadgeh">http://t.co/dfadgeh</a></p>
+                                <span class="read-more"><a href="#" target="_blank" data-feed-link="">read more</a></span>
+                                <a href="#" class="feed-author-box" target="_blank" data-feed-author-link="">
+                                    <img src="https://storage.googleapis.com/i.addblock.net/sample/sns_3_2.jpg" data-feed-author-picture="" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 no-padding text-center"><span class="btn btn-sm data-feed-load-more"><p class="text" data-edit="true" data-selector="p"><span class="fsize18" ><span style="color: rgb(245, 235, 225);"><span style="font-family: 'Jeju Gothic';"><strong>더보기</strong></span></p></div>
+        </div>
+    </div>
+</body>
+</html>
