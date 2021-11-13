@@ -1,2 +1,4 @@
 node_modules/*
 config/key.json
+public/image/
+data/
