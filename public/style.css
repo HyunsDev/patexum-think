@@ -280,7 +280,7 @@
   bottom: 0;
   left: 0;
   box-sizing: border-box;
-  border: solid 4px #05051e;
+  border: solid 2px #05051e;
   opacity: 0;
 }
 .post a:hover::after {
