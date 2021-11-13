@@ -4,8 +4,9 @@ const fs = require("fs")
 const uuidv4 = require('uuid').v4
 const request = require("request")
 const { Webhook, MessageBuilder } = require('discord-webhook-node');
-const hook = new Webhook("https://discord.com/api/webhooks/908733832981803048/GtzpV0oNrVHzMYHCdV1QRgZbnr-7SemBi1c5RkDqGMZdh-iuihEpOYlBOKoOn232ZEk5");
 require('dotenv').config()
+const hook = new Webhook(process.env.DISCORD_WEBHOOK);
+
 
 const crawlingTwitter = async () => {
     try {
