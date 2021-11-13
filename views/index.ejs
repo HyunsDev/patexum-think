@@ -19,29 +19,35 @@
     <div class="container">
       <div class="row text-center social-feed-container" data-loop="true">
 
-        <% for (let i of instagram) { %>
-          <div class="sns_unit post social-feed-element active">
-            <div class="post-wrap">
-              <a href="https://www.instagram.com/p/<%= i.shortcode %>/" target="_blank">
-                <img src="/image/instagram/<%= i.img %>" data-feed-attachment="">
-                <div class="post-content">
-                </div>
-              </a>
+        <div class='col-md-6 col-sm-12 col-xs-12'>
+          <div class="col-sm-12" style="margin-bottom: 24px; margin-top: 12px;"><a target="_blank" href="https://www.instagram.com/explore/tags/uc_think/"><i class="fab fa-instagram" style="font-size: 32px; color: #05051e;"></i></a></div>
+          <% for (let i of instagram) { %>
+            <div class="sns_unit post social-feed-element active">
+              <div class="post-wrap">
+                <a href="https://www.instagram.com/p/<%= i.shortcode %>/" target="_blank">
+                  <img src="/image/instagram/<%= i.img %>" data-feed-attachment="">
+                  <div class="post-content">
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
-        <% } %>
+            <% } %>
+        </div>
 
-        <% for (let i of twitter) { %>
-          <div class="sns_unit post social-feed-element active">
-            <div class="post-wrap">
-              <a href="<%= i.url %>" target="_blank">
-                <img src="/image/twitter/<%= i.thumbnail.url %>" data-feed-attachment="">
-                <div class="post-content">
-                </div>
-              </a>
+        <div class='col-md-6 col-sm-12 col-xs-12'>
+          <div class="col-sm-12" style="margin-bottom: 24px; margin-top: 12px;"><a target="_blank" href="https://twitter.com/hashtag/UC_THINK"><i class="fab fa-twitter" style="font-size: 32px; color: #05051e;"></i></a></div>
+          <% for (let i of twitter) { %>
+            <div class="sns_unit post social-feed-element active">
+              <div class="post-wrap">
+                <a href="<%= i.url %>" target="_blank">
+                  <img src="/image/twitter/<%= i.thumbnail.url %>" data-feed-attachment="">
+                  <div class="post-content">
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
-        <% } %>
+            <% } %>
+        </div>
 
       </div>
     </div>

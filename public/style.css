@@ -10,7 +10,7 @@
 
   .userEL9833256 .sns_unit {
     float: left;
-    width: 16.66%;
+    width: 33.33%;
   }
 
   .userEL9833256 .post {
@@ -65,13 +65,10 @@
     opacity: 0;
   }
 
-  .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+7) {
+  .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+4) {
     margin-top: 10px;
   }
 
-  .userEL9833256 .social-feed-container .social-feed-element:nth-child(n+13) {
-    margin-top: 10px;
-  }
 
   .userEL9833256 .social-feed-container .social-feed-element.show-posts {
     display: block ! important;
