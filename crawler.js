@@ -59,7 +59,7 @@ const crawlingTwitter = async () => {
             newDataLists.push(e.id)
             return {
                 id: e.id,
-                url: e.entities.urls[0].url,
+                url: e.entities.urls[e.entities.urls.length - 1 ].expanded_url,
                 thumbnail: {
                     originUrl: originUrl,
                     url: fileName
