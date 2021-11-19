@@ -32,7 +32,7 @@ router.get('/admin', function (req, res, next) {
 
 router.post('/admin/delete/instagram', function (req, res, next) {
   const code = req.body.shortCode || null;
-  if (req.body.password !== process.env.password) {
+  if (req.body.password !== process.env.PATEXUM_PASSWORD) {
     res.json({
       status: "password"
     })
@@ -65,7 +65,7 @@ router.post('/admin/delete/instagram', function (req, res, next) {
 
 router.post('/admin/delete/twitter', function (req, res, next) {
   const code = req.body.url || null;
-  if (req.body.password !== process.env.password) {
+  if (req.body.password !== process.env.PATEXUM_PASSWORD) {
     res.json({
       status: "password"
     })
@@ -97,7 +97,7 @@ router.post('/admin/delete/twitter', function (req, res, next) {
 });
 
 router.get('/v1/patexum/hello', function (req, res, next) {
-  if (req.query.password == process.env.PASSWORD) {
+  if (req.query.password == process.env.PATEXUM_PASSWORD) {
     const instagramBuffer = fs.readFileSync('./data/instagram.json')
     const instagramJson = JSON.parse(instagramBuffer.toString())
     
