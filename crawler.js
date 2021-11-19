@@ -31,9 +31,16 @@ const crawlingTwitter = async () => {
             }
         })
 
+        const newURLs = []
+
         // 중복&노 미디어 제거
         const responseFiltered = response.data.data.filter(e => {
-            return !twitterJson.ids.includes(e.id) && e?.attachments?.media_keys[0]
+            const url = e.entities.urls ? e.entities?.urls[e.entities?.urls.length - 1 ].expanded_url : null
+
+            if(e?.attachments?.media_keys[0] && !twitterJson.urls.includes(url) && !newURLs.includes(url)) {
+                newURLs.push(url)
+                return true
+            }
         })
 
 
@@ -55,11 +62,13 @@ const crawlingTwitter = async () => {
                 uri: originUrl,
                 encoding: null
             }).pipe(fs.createWriteStream(`public/image/twitter/${fileName}`))
+
+            let url = e.entities.urls[e.entities.urls.length - 1 ].expanded_url
             
-            newDataLists.push(e.id)
+            newDataLists.push(url)
             return {
                 id: e.id,
-                url: e.entities.urls[e.entities.urls.length - 1 ].expanded_url,
+                url: url,
                 thumbnail: {
                     originUrl: originUrl,
                     url: fileName
@@ -70,7 +79,7 @@ const crawlingTwitter = async () => {
 
         // 등록
         const totalData = {
-            ids: [...newDataLists, ...twitterJson.ids],
+            urls: [...newDataLists, ...twitterJson.urls],
             data: [...newDatas, ...twitterJson.data]
         }
         fs.writeFileSync('./data/twitter.json', JSON.stringify(totalData))
@@ -145,6 +154,12 @@ const crawlingInstagram = async () => {
 }
 
 const crawling = async () => {
+    if(!fs.existsSync("./public/image/instagram")) fs.mkdirSync("./public/image/instagram", {recursive: true})
+    if(!fs.existsSync("./public/image/twitter")) fs.mkdirSync("./public/image/twitter", {recursive: true})
+    if(!fs.existsSync("./data")) fs.mkdirSync("./data")
+    if(!fs.existsSync("./data/twitter.json")) fs.writeFileSync("./data/twitter.json", `{"urls": [],"data": []}`)
+    if(!fs.existsSync("./data/instagram.json")) fs.writeFileSync("./data/instagram.json", `{"ids": [],"data": []}`)
+
     let res = {}
     res.twitter = await crawlingTwitter()
     res.instagram = await crawlingInstagram()
