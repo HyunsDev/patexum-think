@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파테슘 #UC_THINK 관리 프로그램</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <div class="toast-divver">
+    <div id="toast" class="toast toast-hide">키를 입력해주세요.</div>
+  </div>
+  
+  <div class="divver">
+    <h1>#UC_THINK</h1>
+    <div class="subtitle">Admin for Patexum</div>
+
+    <div class="row">
+      <p>KEY</p>
+      <input id="password" type="text">
+    </div>
+
+    <div class="works">
+      <div class="works-title">Instagram</div>
+      <% for (let i of instagram) { %>
+        <div class="work">
+          <img class="work-img" src="/image/instagram/<%= i.img %>">
+          <div class="work-btns">
+            <a class="work-btn" href="https://www.instagram.com/p/<%= i.shortcode %>/" target="_blank">LINK</a>
+            <div class="work-btn-delete" id="<%= i.shortcode %>" onclick="delete_instagram(this)">delete</div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+
+    <div class="works">
+      <div class="works-title">Twitter</div>
+      <% for (let i of twitter) { %>
+        <div class="work">
+          <img class="work-img" src="/image/twitter/<%= i.thumbnail.url %>">
+          <div class="work-btns">
+            <a class="work-btn" href="<%= i.url %>" target="_blank">LINK</a>
+            <div class="work-btn-delete" id="<%= i.url %>" onclick="delete_twitter(this)">delete</div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+
+
+  </div>
+  <script src="/admin.js"></script>
+</body>
+</html>
