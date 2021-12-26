@@ -46,6 +46,11 @@ const crawlingTwitter = async () => {
 
         // 미디어 정리
         const mediaList = {}
+        
+        if (!response.data.includes?.media) {
+            return 0
+        }
+
         for (let i of response.data.includes.media) {
             mediaList[i.media_key] = { originUrl: i.url}
         }
